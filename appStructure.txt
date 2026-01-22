@@ -1,0 +1,58 @@
+habits-tracker-backend/
+│
+├── app/
+│   ├── main.py                # Punto de entrada de FastAPI
+│   │
+│   ├── core/                  # Configuración transversal
+│   │   ├── config.py          # Settings (env, DB, JWT, etc.)
+│   │   ├── database.py        # Engine, Session, Base
+│   │   └── security.py        # JWT, hashing (más adelante)
+│   │
+│   ├── api/                   # Capa de presentación (HTTP)
+│   │   ├── deps.py            # Dependencias comunes (DB, auth)
+│   │   ├── router.py          # Router principal
+│   │   └── v1/
+│   │       ├── __init__.py
+│   │       ├── users.py       # Endpoints de usuarios
+│   │       ├── habits.py      # Endpoints de hábitos
+│   │       └── records.py     # Cumplimiento diario
+│   │
+│   ├── models/                # Modelos ORM (SQLAlchemy)
+│   │   ├── __init__.py
+│   │   ├── user.py
+│   │   ├── habit.py
+│   │   └── habit_record.py
+│   │
+│   ├── schemas/               # Schemas Pydantic (API contracts)
+│   │   ├── __init__.py
+│   │   ├── user.py
+│   │   ├── habit.py
+│   │   └── habit_record.py
+│   │
+│   ├── services/              # Lógica de negocio
+│   │   ├── __init__.py
+│   │   ├── user_service.py
+│   │   ├── habit_service.py
+│   │   └── record_service.py
+│   │
+│   ├── repositories/          # Acceso a datos (opcional pero recomendado)
+│   │   ├── __init__.py
+│   │   ├── user_repository.py
+│   │   ├── habit_repository.py
+│   │   └── record_repository.py
+│   │
+│   └── utils/                 # Helpers reutilizables
+│       ├── __init__.py
+│       └── datetime.py
+│
+├── tests/                     # Tests automatizados
+│   ├── __init__.py
+│   ├── conftest.py
+│   └── test_habits.py
+│
+├── alembic/                   # Migraciones (más adelante)
+│
+├── .env                       # Variables de entorno (no commitear)
+├── .gitignore
+├── pyproject.toml / requirements.txt
+└── README.md
