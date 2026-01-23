@@ -1,5 +1,35 @@
 # Habits Backend 🧠📊
 
+## 👤 Información del alumno
+
+- **Nombre y apellidos:** Isra Quiroz  
+- **Número de alumno / identificación académica:** [Indicar número]
+- **GitHub:** https://github.com/[tu-usuario]
+
+---
+
+## 📌 Descripción del proyecto
+
+**Habits** es una API REST desarrollada con **FastAPI** para la gestión y seguimiento de hábitos personales.  
+El backend está completamente desacoplado de la capa de presentación y expone endpoints JSON que serán consumidos por un frontend web en React y una aplicación móvil Android.
+
+---
+
+## ▶️ Ejecución de la API
+
+1. Crear y activar un entorno virtual:
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+2. Instalar dependencias y ejecutar servidor:
+```bash
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+
 Backend del proyecto **Habits**, una aplicación de seguimiento de hábitos personales.
 
 Este backend expone una **API REST desacoplada**, consumida por:
