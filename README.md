@@ -3,8 +3,7 @@
 ## 👤 Información del alumno
 
 - **Nombre y apellidos:** Isra Quiroz  
-- **Número de alumno / identificación académica:** [Indicar número]
-- **GitHub:** https://github.com/[tu-usuario]
+- **GitHub:** https://github.com/IsraQuirozZ
 
 ---
 
